@@ -1,0 +1,26 @@
+<div
+	class="card rounded-lg shadow-lg bg-cyan-50 max-w-sm">
+	{# <img src="{{ vehicles.pic }}" alt="" class"card-img-top"> #}
+	<div class="card-body">
+
+		{% if vehicle.pics is empty %}
+			<h1>
+				No picture
+			</h1>
+
+
+		{% else %}
+			{% for picture in vehicle.pics[0] %}
+				{{ picture }}
+			{% endfor %}
+		{% endif %}
+		{{ vehicle.brand }}
+		{{ vehicle.model }}
+		{{ vehicle.version }}
+		{{ vehicle.year }}
+		{{ vehicle.energy }}
+		{{ vehicle.power }}
+		{{ vehicle.price }}
+
+	</div>
+</div>

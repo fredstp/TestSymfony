@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tous les véhicules
+{% endblock %}
+
+{% block body %}
+	<div class="container">
+		<div class="grid grid-cols-3 gap-4">
+			{% for vehicle in vehicles %}
+				{% include 'vehicles/_card.html.twig' %}
+			{% endfor %}
+		</div>
+	</div>
+{% endblock %}
